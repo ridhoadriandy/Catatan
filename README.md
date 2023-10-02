@@ -16,6 +16,7 @@ Berisi Catatan perintah penting untuk React js dan Next js / Javascript, Typescr
 2. myArray.shift(); myArray.unshift("Apple"); untuk menghapus baris pertama array terus memasukan kembali data baru diawal
 3. myArray.splice(2, 2);   // Menghapus dari index 2 sebanyak 2 elemen kebelakang
 4. month.splice(1, 0, 'February'); // menambahkan element baru setelah index 1 berisi february
+5. function sum(...numbers) {}; artinya menambah semua data didalam parameter numbers, sebagai contoh console.log(sum(1, 2, 3, 4, 5));
 
 // ES6 JS
 1. const allFavorites = [...favorites, ...others]; const newObj = { ...obj1, ...obj2 }; menggabungkan 2 data menjadi 1, bisa bersifat array maupun object
