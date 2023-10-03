@@ -17,6 +17,7 @@ Berisi Catatan perintah penting untuk React js dan Next js / Javascript, Typescr
 3. myArray.splice(2, 2);   // Menghapus dari index 2 sebanyak 2 elemen kebelakang
 4. month.splice(1, 0, 'February'); // menambahkan element baru setelah index 1 berisi february
 5. function sum(...numbers) {}; artinya menambah semua data didalam parameter numbers, sebagai contoh console.log(sum(1, 2, 3, 4, 5));
+6. .filter((item) => Boolean(item)); untuk menghilangkan data array yang bernilai false/kosong
 
 // ES6 JS
 1. const allFavorites = [...favorites, ...others]; const newObj = { ...obj1, ...obj2 }; menggabungkan 2 data menjadi 1, bisa bersifat array maupun object
@@ -24,6 +25,11 @@ Berisi Catatan perintah penting untuk React js dan Next js / Javascript, Typescr
 3. const { firstName: localFirstName, lastName: localLastName, age: localAge } = profile; contoh sintak lain inisialisasi variabel pada object
 4. console.log(capital.get("New Delhi")); pada mapping memiliki key dan value, fungsi get untuk mengambil value berdasarkan key
 5. const numberSet = new Set([1, 4, 6, 4, 1]); artinya memasukan data agar tidak ada duplikasi, dan data ditampilkan secara berurutan langsung
+
+------- Perintah reusable Array ---------
+7. const eligibleForScholarshipStudents = students.filter((student) => student.score > 85); perintah simple untuk memfilter data siswa yang score diatas 85
+8. const totalScore = students.reduce((acc, student) => acc + student.score, 0); perintah simple untuk menambah semua jumlah score siswa
+9. const findJames = students.find(student => student.name === 'James'); perintah simple untuk mencari data berdasarkan nama siswa
 
 // INISIALISASI
 1. type Variant = 'LOGIN' | 'REGISTER'; artinya terdapat 2 data yang dapat digunakan dalam 1 variabel, bisa digunakan pada parameter
