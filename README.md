@@ -1,6 +1,9 @@
 # Catatan
 Berisi Catatan perintah penting untuk React js dan Next js / Javascript, Typescript, JS ES6
 
+// Teori
+1. Dalam membuat berkas package.json, sebaiknya gunakan perintah npm init pada Terminal di dalam project yang kita buat
+
 // SETUP
 1. folder (site) merupakan folder utama yang akan dijalankan
 2. "npm install react-icons react-hook-from clsx" menginstall package react icon, memudahkan validasi dan css dinamis
@@ -27,9 +30,11 @@ Berisi Catatan perintah penting untuk React js dan Next js / Javascript, Typescr
 5. const numberSet = new Set([1, 4, 6, 4, 1]); artinya memasukan data agar tidak ada duplikasi, dan data ditampilkan secara berurutan langsung
 
 ------- Perintah reusable Array ---------
-7. const eligibleForScholarshipStudents = students.filter((student) => student.score > 85); perintah simple untuk memfilter data siswa yang score diatas 85
+7. const eligibleForScholarshipStudents = students.filter(student => student.score > 85); perintah simple untuk memfilter data siswa yang score diatas 85
 8. const totalScore = students.reduce((acc, student) => acc + student.score, 0); perintah simple untuk menambah semua jumlah score siswa
 9. const findJames = students.find(student => student.name === 'James'); perintah simple untuk mencari data berdasarkan nama siswa
+10. const findJames = students.map(student => student.name); perintah untuk menampilkan semua nama siswa berupa object
+
 
 // INISIALISASI
 1. type Variant = 'LOGIN' | 'REGISTER'; artinya terdapat 2 data yang dapat digunakan dalam 1 variabel, bisa digunakan pada parameter
