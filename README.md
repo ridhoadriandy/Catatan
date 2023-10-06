@@ -21,6 +21,9 @@ Berisi Catatan perintah penting untuk React js dan Next js / Javascript, Typescr
 4. month.splice(1, 0, 'February'); // menambahkan element baru setelah index 1 berisi february
 5. function sum(...numbers) {}; artinya menambah semua data didalam parameter numbers, sebagai contoh console.log(sum(1, 2, 3, 4, 5));
 6. .filter((item) => Boolean(item)); untuk menghilangkan data array yang bernilai false/kosong
+7. module.exports = coffeeStock; untuk mengexport suatu object menjadi module
+8. const coffeeStock = require('./state'); mengambil nilai export / mengimport object yang sudah diexport
+9. let user = JSON.parse(data); untuk mengkonversikan file json agar dapat dipanggil sebagai object, cara pemanggilan user.name, user.age
 
 // ES6 JS
 1. const allFavorites = [...favorites, ...others]; const newObj = { ...obj1, ...obj2 }; menggabungkan 2 data menjadi 1, bisa bersifat array maupun object
@@ -28,6 +31,8 @@ Berisi Catatan perintah penting untuk React js dan Next js / Javascript, Typescr
 3. const { firstName: localFirstName, lastName: localLastName, age: localAge } = profile; contoh sintak lain inisialisasi variabel pada object
 4. console.log(capital.get("New Delhi")); pada mapping memiliki key dan value, fungsi get untuk mengambil value berdasarkan key
 5. const numberSet = new Set([1, 4, 6, 4, 1]); artinya memasukan data agar tidak ada duplikasi, dan data ditampilkan secara berurutan langsung
+6. export default coffeeStock; untuk mengexport suatu object agar dapat dipanggil dalam file lain
+7. import coffeeStock from "./state.js"; mengimport / memanggil nama object yang sudah di export sebelumnya
 
 ------- Perintah reusable Array ---------
 7. const eligibleForScholarshipStudents = students.filter(student => student.score > 85); perintah simple untuk memfilter data siswa yang score diatas 85
