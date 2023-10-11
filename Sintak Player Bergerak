@@ -1,0 +1,93 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerBergerak : MonoBehaviour
+{
+    private Vector3 _direction;
+    private CharacterController _characterController;
+    private float _verticalVelocity; // Untuk mengelola gravitasi
+    public float speed = 5.0f;
+    public float jumpForce = 4.0f; // Besar kekuatan loncatan
+    public float gravity = 9.81f; // Gravitasi Bumi
+    private bool _isJumping; // Untuk mengontrol apakah karakter sedang dalam proses loncatan
+
+    private void Awake()
+    {
+        _characterController = GetComponent<CharacterController>();
+    }
+
+    private void Update()
+    {
+        Gravitasi();
+        Bergerak();
+        // Rotasi(); // Sementara komentar ini karena kita akan mengganti cara pergerakan
+
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, _characterController.radius);
+        foreach (Collider collider in hitColliders)
+        {
+            if (collider.CompareTag("virus"))
+            {
+                // Hentikan permainan dan hancurkan karakter jika terjadi tumbukan dengan "virus"
+                Time.timeScale = 0;
+                Destroy(gameObject);
+            }
+            else if(collider.CompareTag("gameover"))
+            {
+                Time.timeScale = 0;
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    void Gravitasi()
+    {
+        // Mengatur gravitasi
+        if (_characterController.isGrounded)
+        {
+            _verticalVelocity = -gravity * Time.deltaTime;
+            _isJumping = false; // Karakter ada di tanah, tidak lagi dalam proses loncatan
+        }
+        else
+        {
+            _verticalVelocity -= gravity * Time.deltaTime;
+        }
+    }
+
+    void Bergerak()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        // Membaca input horizontal dan vertical dari Input Manager
+        _direction = new Vector3(horizontalInput, 0.0f, verticalInput);
+
+        // Normalisasi vector agar pergerakan diagonal tidak lebih cepat
+        if (_direction.magnitude > 1.0f)
+        {
+            _direction.Normalize();
+        }
+
+        // Melompat jika pemain menekan tombol lompat dan karakter berada di tanah dan tidak sedang dalam proses loncatan
+        if (_characterController.isGrounded && Input.GetButtonDown("Jump") && !_isJumping)
+        {
+            _verticalVelocity = jumpForce;
+            
+        }
+
+        // Menggabungkan pergerakan horizontal dengan pergerakan vertikal
+        Vector3 movement = _direction * speed * Time.deltaTime;
+        movement.y = _verticalVelocity * Time.deltaTime;
+
+        // Menggerakkan karakter
+        _characterController.Move(movement);
+
+        // Rotasi karakter
+        if (horizontalInput != 0 || verticalInput != 0)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(_direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10.0f);
+        }
+    }
+
+}
