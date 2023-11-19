@@ -1,0 +1,46 @@
+PENJELASAN REACT JS - JAVASCRIPT - ES6
+
+-- Package React Wajib --
+npm create vite@latest frontend-react -- --template react
+npm install
+npm install react-bootstrap bootstrap
+-------------------------
+
+-- Optional --
+folder (site) merupakan folder utama yang akan dijalankan
+"npm install react-icons react-hook-from clsx" menginstall package react icon, memudahkan validasi dan css dinamis
+"npm install bcrypt mongodb mongoose next-auth" menginstall package backend mongodb dan next auth
+--------------
+
+-- React JS --
+useState = untuk menginisialisasi variabel berulang kali / recycle
+useRef/forwardRef = untuk melakukan proses / aksi tanpa harus merender tampilan atau component, bisa juga sebagai manipulasi DOM seperti getElementbyId
+useEffect = melakukan aksi/proses setelah semua tampilan atau component sudah dirender, ada 4 macam useEffect.
+Penggunaan Children harus seperti ini Dicoding
+--------------
+
+-- Javascript --
+myArray.push('JavaScript'); untuk memasukan data kedalam array dibarisan terakhir
+myArray.shift(); myArray.unshift("Apple"); untuk menghapus baris pertama array terus memasukan kembali data baru diawal
+myArray.splice(2, 2); // Menghapus dari index 2 sebanyak 2 elemen kebelakang
+month.splice(1, 0, 'February'); // menambahkan element baru setelah index 1 berisi february
+function sum(...numbers) {}; artinya menambah semua data didalam parameter numbers, sebagai contoh console.log(sum(1, 2, 3, 4, 5));
+.filter((item) => Boolean(item)); untuk menghilangkan data array yang bernilai false/kosong
+module.exports = coffeeStock; untuk mengexport suatu object menjadi module
+const coffeeStock = require('./state'); mengambil nilai export / mengimport object yang sudah diexport
+let user = JSON.parse(data); untuk mengkonversikan file json agar dapat dipanggil sebagai object, cara pemanggilan user.name, user.age
+---------------
+
+-- ES6 JS --
+const allFavorites = [...favorites, ...others]; const newObj = { ...obj1, ...obj2 }; menggabungkan 2 data menjadi 1, bisa bersifat array maupun object
+const { firstName, lastName, age } = profile; membuatkan semua isi dari object menjadi variable tanpa perlu memanggil profile.firstName
+const eligibleForScholarshipStudents = students.filter(student => student.score > 85); perintah simple untuk memfilter data siswa yang score diatas 85
+const totalScore = students.reduce((acc, student) => acc + student.score, 0); perintah simple untuk menambah semua jumlah score siswa
+const findJames = students.find(student => student.name === 'James'); perintah simple untuk mencari data berdasarkan nama siswa
+const findJames = students.map(student => student.name); perintah untuk menampilkan semua nama siswa berupa object
+------------
+const { firstName: localFirstName, lastName: localLastName, age: localAge } = profile; contoh sintak lain inisialisasi variabel pada object
+console.log(capital.get("New Delhi")); pada mapping memiliki key dan value, fungsi get untuk mengambil value berdasarkan key
+const numberSet = new Set([1, 4, 6, 4, 1]); artinya memasukan data agar tidak ada duplikasi, dan data ditampilkan secara berurutan langsung
+export default coffeeStock; untuk mengexport suatu object agar dapat dipanggil dalam file lain
+import coffeeStock from "./state.js"; mengimport / memanggil nama object yang sudah di export sebelumnya
