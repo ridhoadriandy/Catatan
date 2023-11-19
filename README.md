@@ -13,6 +13,7 @@ Berisi Catatan perintah penting untuk React js dan Next js / Javascript, Typescr
 1. useState = untuk menginisialisasi variabel berulang kali / recycle
 2. useRef/forwardRef = untuk melakukan proses / aksi tanpa harus merender tampilan atau component, bisa juga sebagai manipulasi DOM seperti getElementbyId
 3. useEffect = melakukan aksi/proses setelah semua tampilan atau component sudah dirender, ada 4 macam useEffect.
+4. Penggunaan Children harus seperti ini <SayHello>Dicoding</SayHello>
 
 // JAVASCRIPT
 1. myArray.push('JavaScript'); untuk memasukan data kedalam array dibarisan terakhir
