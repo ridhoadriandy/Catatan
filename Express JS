@@ -1,13 +1,18 @@
+-- Starter Pack --
+npm init -y | menambahkan paket json
+npm install express, mysql2 sequelize argon2 cors dotenv
+------------------
+
 npm install express@4.17.1 --save
 npm install -g nodemon | seharusnya untuk merestart web tanpa harus mematikan servernya, "Coba cari package yang lain!"
-npm install mysql@2.18.1 --save | Menginstall MYQSL agar tersambung ke phpmyadmin Xampp
+npm install mysql2 | Menginstall MYQSL agar tersambung ke phpmyadmin Xampp
 npm install body-parser@1.19.0 --save | merupakan library middleware membaca http post dan meyimpan sebagai object
-npm install cors@2.8.5 --save | agar sumber daya server dapat di akses perangkat mana saja
+npm install cors | agar sumber daya server dapat di akses perangkat mana saja
 
 -- Untuk Auth JWT -- 
-npm install sequelize, jsonwebtoken, dotenv, bcrypt, cookie-parser
 npm install sequelize
 npm install jsonwebtoken
 npm install dotenv | memungkinkan kita untuk membuat environment variabel
-npm install bcrypt | untuk mengenskripsi password
+npm install argon2 | untuk mengenskripsi password
 npm install cookie-parser | untuk memparser cookie
+--------------------
