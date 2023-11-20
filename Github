@@ -1,0 +1,32 @@
+-- Push Branch --
+git add .
+git commit -m 'pesan'
+git push origin Ridho
+------------------
+
+-- Membuat dan Pindah Branch --
+git branch
+git branch example | menambahkan branch baru bernama example
+git checkout example | pindah branch ke example
+---------------------
+
+-- Merge Branch --
+1). Pindah dulu ke branch master / main
+2). git merge example | menggabung file example ke master -> otomatis example tidak dibutuhkan lagi
+-- Jenis Merge --
+Fast Forward | langsung merge ke jalur yang terhubung ke main
+Three-way Merge / recursive strategy | merge branch dengan jalur yang berbeda 
+------------------
+
+-- Menghapus Branch --
+git branch -d example | menghapus branch example karna tidak dibutuhkan lagi
+-- optional --
+git branch --merged | langsung menghapus branch yang sudah di merge ke main
+-----------------------
+
+-- Mengecek Log -- 
+git status
+git log --all --decorate --oneline --graph
+alias graph="git log --all --decorate --oneline --graph"
+graph
+------------------
