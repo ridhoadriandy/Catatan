@@ -9,6 +9,7 @@ npm install -g nodemon | seharusnya untuk merestart web tanpa harus mematikan se
 npm install mysql2 | Menginstall MYQSL agar tersambung ke phpmyadmin Xampp
 npm install body-parser@1.19.0 --save | merupakan library middleware membaca http post dan meyimpan sebagai object
 npm install cors | agar sumber daya server dapat di akses perangkat mana saja
+npm install express-validator
 
 -- Untuk Auth JWT -- 
 npm install sequelize
