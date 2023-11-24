@@ -13,6 +13,7 @@ npm install axios | untung mengelola endpoint ke express js
 folder (site) merupakan folder utama yang akan dijalankan
 "npm install react-icons react-hook-from clsx" menginstall package react icon, memudahkan validasi dan css dinamis
 "npm install bcrypt mongodb mongoose next-auth" menginstall package backend mongodb dan next auth
+npm install redux react-redux
 --------------
 
 -- React JS --
