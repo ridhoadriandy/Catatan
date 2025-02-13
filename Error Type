@@ -1,0 +1,40 @@
+1️⃣ Kode 1xx (Informational - Informasi)
+Digunakan untuk memberikan informasi bahwa permintaan sedang diproses.
+
+100 Continue → Permintaan diterima, klien bisa melanjutkan.
+101 Switching Protocols → Server mengubah protokol seperti dari HTTP ke WebSocket.
+2️⃣ Kode 2xx (Success - Berhasil)
+Permintaan berhasil diproses tanpa error.
+
+200 OK → Permintaan sukses, data dikembalikan.
+201 Created → Data berhasil dibuat (misalnya saat POST).
+202 Accepted → Permintaan diterima tetapi belum diproses.
+204 No Content → Permintaan berhasil, tapi tidak ada data yang dikembalikan.
+3️⃣ Kode 3xx (Redirection - Pengalihan)
+Digunakan untuk memberitahu klien bahwa mereka harus mengikuti URL lain.
+
+301 Moved Permanently → URL dipindahkan secara permanen.
+302 Found → URL sementara dipindahkan ke lokasi lain.
+304 Not Modified → Data di-cache masih valid, tidak perlu diambil ulang.
+4️⃣ Kode 4xx (Client Error - Kesalahan dari Klien)
+Terjadi jika permintaan dari klien salah atau tidak valid.
+
+400 Bad Request → Permintaan salah atau tidak bisa diproses.
+401 Unauthorized → Autentikasi diperlukan tetapi tidak valid.
+403 Forbidden → Permintaan ditolak, meskipun autentikasi benar.
+404 Not Found → URL atau resource tidak ditemukan.
+405 Method Not Allowed → Metode HTTP (GET, POST, dll.) tidak diizinkan.
+429 Too Many Requests → Terlalu banyak permintaan dalam waktu singkat.
+5️⃣ Kode 5xx (Server Error - Kesalahan dari Server)
+Terjadi jika server gagal memproses permintaan.
+
+500 Internal Server Error → Kesalahan umum di server.
+502 Bad Gateway → Server mendapat respons buruk dari server lain.
+503 Service Unavailable → Server sedang down atau terlalu sibuk.
+504 Gateway Timeout → Server gagal merespons dalam waktu tertentu.
+Kesimpulan
+🔹 Kode 1xx → Informasi sementara.
+🔹 Kode 2xx → Permintaan berhasil.
+🔹 Kode 3xx → Redirect ke lokasi lain.
+🔹 Kode 4xx → Kesalahan dari klien.
+🔹 Kode 5xx → Kesalahan dari server.
