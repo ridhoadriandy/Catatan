@@ -45,5 +45,13 @@ mongoose
   })
   .catch((error) => console.log(error));
 
+------- Client --------
+1) npm create vite@latest
+- client
+- npm install
 
+2) Package
+- npm install react-router-dom | browser router agar kita SPA, single page application
+- npm install axios | untung mengelola endpoint ke express js
+- npm install -D tailwindcss postcss autoprefixer
 
